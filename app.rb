@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School!!</a>"			
+	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School!!</a>"
 end
 
 get '/about' do
@@ -24,8 +24,9 @@ post '/visit' do
 	@user_phone = params[:user_phone]
 	@user_date_visit = params[:user_date_visit]
 	@master = params[:selected_master]
-	File.open('./public/visit.txt', 'a'){|f| f.write("#{@user_name},#{@user_phone},#{@user_date_visit},#{@master}\n")}
-	erb :visit
+  @color = params[:color]
+	File.open('./public/visit.txt', 'a'){|f| f.write("#{@user_name},#{@user_phone},#{@user_date_visit},#{@master}, #{@color}\n")}
+	erb "OK, username is #{@user_name}, #{@user_phone}, #{@user_date_visit}, #{@master}, #{@color}"
 end
 
 post '/contacts' do
