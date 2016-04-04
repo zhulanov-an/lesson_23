@@ -1,0 +1,25 @@
+<h2>Записаться</h2>
+<p>На этой странице Вы сможете записаться к нам на стрижку</p>
+<form action="/visit" method="post">
+  <div class="form-group">
+    <label for="exampleInputName1">Ваше имя: </label>
+    <input type="text" class="form-control" id="exampleInputName1" placeholder="Введите Ваше имя" name="user_name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPhone1">Ваш телефон: </label>
+    <input type="text" class="form-control" id="exampleInputPhone1" placeholder="Введите Ваш номер телефона" name="user_phone">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDate1">Когда Вас ждать? </label>
+    <input type="text" class="form-control" id="exampleInputDate1" placeholder="Введите дату и время" name="user_date_visit">
+  </div>
+  <div class="form-group">
+    <label for="exampleSelectMaster">Выберите мастера</label>
+    <select class="form-control" id = "exampleSelectMaster" name = "selected_master">
+      <option>Виктор Петрович</option>
+      <option>Алексей Николаевич</option>
+      <option>Вадим Вадимыч</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Записаться!</button>
+</form>
